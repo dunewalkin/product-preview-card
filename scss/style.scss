@@ -1,0 +1,120 @@
+@use "color";
+
+body {
+    background-color:color.$cream;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.preview-card {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 50% 50%;
+    max-width: 600px;
+    min-height: 450px;
+    background-color: color.$white;
+    border-radius: 10px;
+
+    @media (max-width: 680px) {
+        grid-template-columns: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+
+        @media (max-width: 680px) {
+            padding: 24px;
+        }
+    }
+
+    &__category {
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 5px;
+        color: color.$dark-grayish-blue;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @media (max-width: 680px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__title {
+        font-family: 'Fraunces';
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 24px;
+
+        @media (max-width: 680px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__description {
+        color: color.$dark-grayish-blue;
+        margin-bottom: 29px;
+
+        @media (max-width: 680px) {
+            margin-bottom: 24px;
+        }
+    }
+    
+    &__price-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        @media (max-width: 680px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__actual-price {
+        font-family: 'Fraunces';
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        color: color.$dark-cyan;
+        margin-right: 19px;
+    }
+
+    &__old-price {
+        text-decoration-line: line-through;
+        color: color.$dark-grayish-blue;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        gap: 11px;
+        padding: 15px 62px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: color.$white;
+        background-color: color.$dark-cyan;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: color.$dark-cyan-hover;
+        }
+    }
+}
+

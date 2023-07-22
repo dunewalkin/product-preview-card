@@ -1,0 +1,114 @@
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.preview-card {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 50% 50%;
+  max-width: 600px;
+  min-height: 450px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+@media (max-width: 680px) {
+  .preview-card {
+    grid-template-columns: 100%;
+  }
+}
+.preview-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.preview-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+@media (max-width: 680px) {
+  .preview-card__wrapper {
+    padding: 24px;
+  }
+}
+.preview-card__category {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 5px;
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media (max-width: 680px) {
+  .preview-card__category {
+    margin-bottom: 12px;
+  }
+}
+.preview-card__title {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+@media (max-width: 680px) {
+  .preview-card__title {
+    margin-bottom: 16px;
+  }
+}
+.preview-card__description {
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 29px;
+}
+@media (max-width: 680px) {
+  .preview-card__description {
+    margin-bottom: 24px;
+  }
+}
+.preview-card__price-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 680px) {
+  .preview-card__price-section {
+    margin-bottom: 20px;
+  }
+}
+.preview-card__actual-price {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: hsl(158, 36%, 37%);
+  margin-right: 19px;
+}
+.preview-card__old-price {
+  text-decoration-line: line-through;
+  color: hsl(228, 12%, 48%);
+}
+.preview-card .btn {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  padding: 15px 62px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  cursor: pointer;
+}
+.preview-card .btn:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+
+/*# sourceMappingURL=style.css.map */
